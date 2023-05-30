@@ -23,6 +23,7 @@ public class Ejercicio05
 			System.out.println("(0) Para salir");
 			System.out.println("Por favor ingrese una opci�n");
 
+			// obtenemos el valor ingresado en la terminal
 			opcionseleccionada = entrada.nextInt();
 
 			switch (opcionseleccionada) {
