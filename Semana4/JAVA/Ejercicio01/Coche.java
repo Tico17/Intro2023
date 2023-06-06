@@ -54,13 +54,19 @@ public class Coche {
      * @param modelo El modelo del coche.
      * @param color El color del coche.
      */
-    public Coche( String marca,  String modelo,  String color) 
+    public Coche( String vpMarca,  String vpModelo,  String vpColor, int vpAnno, String vpTipoCobustible, String vpTipoMotor, String vpTipoTransmision) 
     {
         // 
-        this.marca = marca;
-        this.modelo = modelo;
-        this.color = color;
+        this.marca = vpMarca;
+        this.modelo = vpModelo;
+        this.color = vpColor;
         this.velocidad = 0;
+
+        this.anno = vpAnno;
+        this.tipoCombustible = vpTipoCobustible;
+        this.tipoMotor = vpTipoMotor;
+        this.tipoTransmision = vpTipoTransmision;
+
     }
 
     /**
@@ -107,7 +113,7 @@ public class Coche {
         miCoche.acelerar(50);
 
         miCoche.frenar(20);
-        
+
         miCoche.mostrarInformacion();
     }
 }
