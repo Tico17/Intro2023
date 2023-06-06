@@ -29,13 +29,12 @@ En resumen, una instancia es una representación concreta y única de un objeto 
 Es como tener un objeto real que ha tomado forma basándose en las características y comportamiento definidos en la clase.
 */
 
-
 /**
  * Clase que representa un coche.
  */
 public class Coche {
 
-    // Atributos ( variables tipo  )
+    // Atributos ( variables tipo )
     private String marca;
     private String modelo;
     private String color;
@@ -47,16 +46,23 @@ public class Coche {
 
     /**
      * Constructor de la clase Coche.
-     * Es el metodo encargado de iniciar la creacion de un objeto nuevo con base a la clase y donde se encapsula
+     * Es el metodo encargado de iniciar la creacion de un objeto nuevo con base a
+     * la clase y donde se encapsula
      * la funcionalidad de inicio del mismo.
      * 
-     * @param marca La marca del coche.
+     * @param marca  La marca del coche.
      * @param modelo El modelo del coche.
-     * @param color El color del coche.
+     * @param color  El color del coche.
      */
-    public Coche( String vpMarca,  String vpModelo,  String vpColor, int vpAnno, String vpTipoCobustible, String vpTipoMotor, String vpTipoTransmision) 
-    {
-        // 
+    public Coche(
+            String vpMarca,
+            String vpModelo,
+            String vpColor,
+            int vpAnno,
+            String vpTipoCobustible,
+            String vpTipoMotor,
+            String vpTipoTransmision) {
+        //
         this.marca = vpMarca;
         this.modelo = vpModelo;
         this.color = vpColor;
@@ -71,6 +77,7 @@ public class Coche {
 
     /**
      * Método para acelerar el coche.
+     * 
      * @param incremento El valor de incremento de velocidad.
      */
     public void acelerar(int incremento) {
@@ -80,6 +87,7 @@ public class Coche {
 
     /**
      * Método para frenar el coche.
+     * 
      * @param decremento El valor de decremento de velocidad.
      */
     public void frenar(int decremento) {
@@ -99,13 +107,18 @@ public class Coche {
         System.out.println("Modelo: " + modelo);
         System.out.println("Color: " + color);
         System.out.println("Velocidad: " + velocidad + " km/h");
+
+        System.out.println("Año: " + anno);
+        System.out.println("tipo Combustible: " + tipoCombustible);
+        System.out.println("tipo Motor: " + tipoMotor);
+        System.out.println("tipo Transmision: " + tipoTransmision);
     }
 
     // Método principal para probar la clase
     public static void main(String[] args) {
 
         // Crear una instancia de la clase Coche
-        Coche miCoche = new Coche("Ford", "Mustang", "Rojo");
+        Coche miCoche = new Coche("Ford", "Mustang", "Rojo", 2023, "Gasolina", "2000CC", "Automatica");
 
         // Llamar a los métodos de la instancia
         miCoche.mostrarInformacion();
@@ -117,4 +130,3 @@ public class Coche {
         miCoche.mostrarInformacion();
     }
 }
-
