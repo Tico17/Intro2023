@@ -16,6 +16,7 @@ public class Ejercicio05
 
 		// Creamos un ciclo
 		do {
+			//int test = 10/0;
 
 			System.out.println("Menu de comidas");
 			System.out.println("(1) Para comidas mexicanas");

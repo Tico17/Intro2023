@@ -1,0 +1,17 @@
+@startuml
+start
+:Cliente selecciona la opción de reserva;
+if (Mesa disponible?) then (yes)
+  :Cliente ingresa los detalles de la reserva;
+  :Sistema valida la disponibilidad de la mesa;
+  if (Disponibilidad confirmada?) then (yes)
+    :Sistema registra la reserva;
+    :Mostrar mensaje de reserva exitosa;
+  else (no)
+    :Mostrar mensaje de mesa no disponible;
+  endif
+else (no)
+  :Mostrar mensaje de mesas agotadas;
+endif
+stop
+@enduml

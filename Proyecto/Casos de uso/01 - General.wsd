@@ -1,0 +1,39 @@
+@startuml
+left to right direction
+actor Cliente
+actor Administrador
+
+rectangle "Sistema de Reservas" {
+  title "Realizar Reserva"
+
+  actor Cliente as client
+  actor Administrador as admin
+
+  client -- (Realizar Reserva)
+  (Realizar Reserva) <-- admin
+
+  client --> (Ver Mesas Disponibles)
+  (Ver Mesas Disponibles) --> admin
+
+  client --> (Confirmar Reserva)
+  (Confirmar Reserva) <-- admin
+
+  client --> (Cancelar Reserva)
+  (Cancelar Reserva) <-- admin
+
+  client --> (Mostrar Detalles Reserva)
+  (Mostrar Detalles Reserva) --> admin
+}
+
+note right of Cliente
+  El cliente del restaurante
+  interactúa con el sistema
+  para realizar una reserva.
+end note
+
+note left of Administrador
+  El administrador del restaurante
+  tiene acceso para realizar acciones
+  relacionadas con las reservas.
+end note
+@enduml

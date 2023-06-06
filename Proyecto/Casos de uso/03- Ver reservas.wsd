@@ -1,0 +1,10 @@
+@startuml
+left to right direction
+actor Cliente
+actor Administrador
+
+rectangle "Sistema de Reservas" {
+  Cliente -- (Ver Reservas)
+  (Ver Reservas) <-- Administrador
+}
+@enduml
