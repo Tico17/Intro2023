@@ -34,19 +34,29 @@ Es como tener un objeto real que ha tomado forma basándose en las característi
  * Clase que representa un coche.
  */
 public class Coche {
-    // Atributos
+
+    // Atributos ( variables tipo  )
     private String marca;
     private String modelo;
     private String color;
     private int velocidad;
+    private int anno;
+    private String tipoCombustible;
+    private String tipoMotor;
+    private String tipoTransmision;
 
     /**
      * Constructor de la clase Coche.
+     * Es el metodo encargado de iniciar la creacion de un objeto nuevo con base a la clase y donde se encapsula
+     * la funcionalidad de inicio del mismo.
+     * 
      * @param marca La marca del coche.
      * @param modelo El modelo del coche.
      * @param color El color del coche.
      */
-    public Coche(String marca, String modelo, String color) {
+    public Coche( String marca,  String modelo,  String color) 
+    {
+        // 
         this.marca = marca;
         this.modelo = modelo;
         this.color = color;
@@ -58,7 +68,7 @@ public class Coche {
      * @param incremento El valor de incremento de velocidad.
      */
     public void acelerar(int incremento) {
-        velocidad += incremento;
+        this.velocidad += incremento;
         System.out.println("El coche " + marca + " " + modelo + " ha acelerado a " + velocidad + " km/h.");
     }
 
@@ -87,13 +97,17 @@ public class Coche {
 
     // Método principal para probar la clase
     public static void main(String[] args) {
+
         // Crear una instancia de la clase Coche
         Coche miCoche = new Coche("Ford", "Mustang", "Rojo");
 
         // Llamar a los métodos de la instancia
         miCoche.mostrarInformacion();
+
         miCoche.acelerar(50);
+
         miCoche.frenar(20);
+        
         miCoche.mostrarInformacion();
     }
 }
