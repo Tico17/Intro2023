@@ -44,6 +44,8 @@ public class Coche {
     private String tipoMotor;
     private String tipoTransmision;
 
+    // 
+
     /**
      * Constructor de la clase Coche.
      * Es el metodo encargado de iniciar la creacion de un objeto nuevo con base a
@@ -99,6 +101,8 @@ public class Coche {
         System.out.println("El coche " + marca + " " + modelo + " ha frenado a " + velocidad + " km/h.");
     }
 
+
+
     /**
      * Método para mostrar la información del coche.
      */
@@ -128,5 +132,9 @@ public class Coche {
         miCoche.frenar(20);
 
         miCoche.mostrarInformacion();
+
+
+        
+
     }
 }
