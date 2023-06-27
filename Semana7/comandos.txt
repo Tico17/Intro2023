@@ -1,0 +1,36 @@
+main	Este comando es tu punto de partida y se utiliza para declarar o crear nuevas clases.
+class	A través de class defines métodos y propiedades de un objeto.
+public	A través de public, también pueden acceder a él otras clases.
+object	Con object asignas un objeto a una variable.
+static	Con static te aseguras de que los cambios de la variable de un objeto sean asumidos también por los demás objetos de una clase.
+
+Java commands	    Descripción
+void	            void indica que no se va a pasar ningún dato y en su lugar se deja vacía la ubicación correspondiente.
+args	            args se utiliza para pasar valores en forma de matriz desde la línea de comandos al método main de Java.
+string	            string define una cadena en Java.
+System.out.println	Con este comando tienes una salida de texto a través de la consola. Después de la salida, también se inserta una nueva línea.
+private	            private garantiza que una función sólo se ejecute dentro de la clase correspondiente.
+int (integer)	    int especifica números enteros en Java, que pueden ser positivos o negativos.
+int primeracifra;	Este comando crea una variable int y le da el nombre “primeracifra”.
+double	            double especifica números decimales y almacena datos con doble precisión.
+double resultado;	Este comando crea una variable double y le da el nombre de “resultado”.
+char	            char se utiliza para especificar exactamente un carácter.
+char uncarácter;	Este comando crea una variable char y le da el nombre “uncarácter”.
+try catch	        try devuelve una cadena de comandos que quieres ejecutar y catch es un refuerzo que realiza una segunda operación si la primera no funciona.
+if ( condición )    
+{Primer indicación}
+else 
+{Segunda indicación}	Con if y else puedes comprobar si una variable tiene un valor determinado. Si cumple la condición, se ejecuta la primera indicación. Si la condición no se cumple, se ejecuta la segunda indicación.
+
+
+Java commands	                                        Descripción
+While ( condición de terminación ) {indicación;}	    Mientras la condición de terminación sea verdadera, la indicación se ejecuta una y otra vez. Si la condición deja de cumplirse, el programa se termina.
+do {indicación;} while ( condición de terminación )	    A diferencia del while, el do while es un bucle controlado por el pie. Esto significa que la indicación se ejecuta primero y el programa solo comprueba si la condición de terminación es “true” o “false”.
+for ( int i = 1;i <= 5;i++ {System.out.println}	        También con for, una sentencia se ejecuta mientras la condición de terminación sea “true”. Sin embargo, a diferencia del bucle while, el for tiene una variable de ejecución que puede utilizarse para determinar de antemano la frecuencia con la que se va a repetir la sentencia.
+
+
+Java commands	Descripción
+extends	        Con este comando se asegura de que una nueva clase herede todas las características de la clase base.
+return	        Asigna un valor de retorno a un método.
+super keyword	Utilizando la palabra clave super, una clase superior (o superclase) heredará todos los atributos y métodos a todas las subclases.
+this	        El comando ‘this’ actúa como variables de referencia en Java y te permite acceder al objeto actual en el programa.
