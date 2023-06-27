@@ -9,7 +9,7 @@ public class Menu {
      * Metodo constructor
      */
     public Menu() { // Inicio constructor
-
+        MostrarOpciones();
     } // Fin de constructor
 
     /**
@@ -73,7 +73,7 @@ public class Menu {
              */
             switch (opcion) { // inicio de switch
                 case 1:
-                    System.out.println("Has seleccionado la opción 1");
+                    Saludar();
                     // Agrega el código correspondiente a la opción 1
                     break;
                 case 2:
@@ -105,4 +105,10 @@ public class Menu {
         entrada.close();
     } // Fin
 
+
+    public void Saludar() {
+        System.out.print("Hola");
+    }
+
+    
 }

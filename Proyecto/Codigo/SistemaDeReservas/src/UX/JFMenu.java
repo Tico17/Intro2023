@@ -20,12 +20,7 @@ public class JFMenu {
 
         // Crear los elementos del menú
         JMenuItem newItem = new JMenuItem("Nuevo");
-        newItem.addActionListener(e -> {
-            JPNew formPanel = new JPNew();
-            frame.setContentPane(formPanel.getContentPanel());
-            frame.revalidate();
-            frame.repaint();
-        });
+    
         JMenuItem openItem = new JMenuItem("Abrir");
         JMenuItem saveItem = new JMenuItem("Guardar");
         JMenuItem exitItem = new JMenuItem("Salir");
