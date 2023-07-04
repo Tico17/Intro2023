@@ -9,7 +9,7 @@ public class Menu {
      * Metodo constructor
      */
     public Menu() { // Inicio constructor
-        MostrarOpciones();
+        login();
     } // Fin de constructor
 
     /**
@@ -105,10 +105,43 @@ public class Menu {
         entrada.close();
     } // Fin
 
-
     public void Saludar() {
         System.out.print("Hola");
     }
 
-    
+    public void login() {
+
+        /**
+         * Se le pasa como parametro al constructor de Scanner System.in para indicar
+         * que solo deseamos
+         * obtener los valores que ingresa el usuario
+         */
+        Scanner entrada = new Scanner(System.in);
+
+        /** Solicitar los valores al usuario */
+        String vlUsuario = "";
+        String vlClave = "";
+
+        System.out.println("Por favor ingrese sus credenciales");
+        System.out.println("Ingrese su usuario");
+        vlUsuario = entrada.next();
+        System.out.println("Por favor ingrese su contraseña");
+        vlClave = entrada.next();
+
+        Seguridad vlSeguridad = new Seguridad();
+
+        Boolean vlResultado = vlSeguridad.buscarPorUsuarioClave(vlUsuario, vlClave);
+
+        if (vlResultado) {
+            System.out.println("Bienvenido!");
+            MostrarOpciones();
+        } else {
+            System.out.println("Credenciales incorrectas!");
+
+        }
+
+        entrada.close();
+
+    }
+
 }

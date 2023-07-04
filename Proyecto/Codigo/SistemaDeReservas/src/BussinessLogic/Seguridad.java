@@ -4,6 +4,10 @@ import Common.Usuario;
 
 public class Seguridad {
 
+    public Seguridad() {
+        registroDeUsuarios();
+    }
+
     /** Definir las vaariables globales */
     public Usuario[] arregloUsuarios = new Usuario[5];
 
