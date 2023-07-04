@@ -35,12 +35,8 @@ public class Seguridad {
      * vpUsuario y vpClave.
      * Tambien se utiliza la variable global arregloUsuarios,
      * que es el arreglo de Usuarios en el que se realizará la búsqueda.
-     * 
-     * @param vpUsuario
-     * @param vpClave
-     * @return
      */
-    public boolean buscarUsuarioPorUsuarioClave(String vpUsuario, String vpClave) {
+    public boolean buscarPorUsuarioClave(String vpUsuario, String vpClave) {
         /**
          * Se inicia un bucle for que recorre el arreglo de objetos desde el índice 0
          * hasta el último índice (length - 1).
@@ -61,8 +57,8 @@ public class Seguridad {
              * Utilizamos la variable indice para obtener el usuario almacenado en la
              * posicion del arreglo
              */
-            var vlUsuario = arregloUsuarios[indice].getVgNombreDeUsuario();
-            var vlClave = arregloUsuarios[indice].getVgPassword();
+            String vlUsuario = arregloUsuarios[indice].getVgNombreDeUsuario();
+            String vlClave = arregloUsuarios[indice].getVgPassword();
 
             if (vlClave.equals(vpClave) && vlUsuario.equals(vpUsuario)) {
 
