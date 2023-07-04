@@ -1,0 +1,39 @@
+/**--- Arreglos (Arrays): ---**/
+
+Los arreglos son una estructura de datos fija que almacena una colección de elementos del mismo tipo.
+
+En Java, los arreglos tienen una longitud fija que se especifica al crearlos y no se puede modificar posteriormente.
+
+Se definen utilizando la sintaxis tipo[] nombreArreglo = new tipo[longitud], donde tipo es el tipo de dato de los elementos y
+longitud es el número de elementos que puede contener el arreglo.
+
+Los elementos del arreglo se acceden utilizando un índice entero, comenzando desde 0 hasta la longitud del arreglo menos 1.
+
+Los arreglos pueden contener elementos de tipos primitivos o referencias a objetos.
+
+
+/**--- Vectores (Vectors): ---**/
+
+Los vectores son una estructura de datos dinámica que almacena una colección de elementos del mismo tipo.
+
+En Java, los vectores tienen una longitud flexible y pueden crecer o disminuir según sea necesario.
+
+Se implementan mediante la clase Vector en Java y forman parte de la biblioteca estándar (java.util.Vector).
+
+Los vectores proporcionan métodos y operaciones adicionales para agregar, eliminar y acceder a los elementos de manera eficiente.
+
+Los elementos del vector también se acceden utilizando un índice entero, al igual que los arreglos.
+
+Los vectores pueden contener elementos de tipos primitivos o referencias a objetos.
+
+La principal diferencia entre los arreglos y los vectores radica en su capacidad de tamaño flexible. 
+Los arreglos tienen una longitud fija que se establece al momento de su creación y no se puede modificar después,
+mientras que los vectores pueden crecer o disminuir su tamaño según sea necesario.
+
+En general, si sabes de antemano cuántos elementos necesitarás y no necesitas agregar o eliminar elementos 
+de manera dinámica, los arreglos son una opción adecuada. Por otro lado, si necesitas una estructura de datos 
+que pueda adaptarse a cambios en el número de elementos, los vectores ofrecen más flexibilidad.
+
+Es importante destacar que, en versiones más recientes de Java, se recomienda utilizar las 
+implementaciones de la interfaz List, como ArrayList o LinkedList, en lugar de la clase Vector,
+debido a que las implementaciones de List suelen ser más eficientes y proporcionan funcionalidades similares.

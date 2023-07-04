@@ -83,7 +83,7 @@ public class Cliente {
      * Java proporciona automáticamente un constructor por defecto sin parámetros.
      * Este constructor inicializa las variables con valores predeterminados (0 para
      * tipos numéricos, false para tipos booleanos, null para referencias de
-     * objetos, etc.).
+     * objetos y string, etc.).
      * 
      * El uso de métodos constructores en Java es esencial para la creación de
      * objetos y la inicialización de variables. Proporcionan una forma estructurada
@@ -97,20 +97,6 @@ public class Cliente {
         vgApellido = vpApellido;
         vgIdentificacion = vpIdentificacion;
         vgTelefono = vpTelefono;
-    }
-
-    public Cliente(){
-        vgNombre = "";
-        vgApellido = "";
-        vgIdentificacion = "";
-        vgTelefono = "";
-    }
-
-    public Cliente(String vpIdentificacion){
-        vgNombre = "";
-        vgApellido = "";
-        vgIdentificacion = vpIdentificacion;
-        vgTelefono = "";
     }
 
     /** Paso 3 Get y Set */
