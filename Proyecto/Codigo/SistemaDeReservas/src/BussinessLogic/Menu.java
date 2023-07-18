@@ -240,4 +240,12 @@ public class Menu {
          */
         System.out.println("El numero de mesa: " + vpNumeroMesa + " no esta disponible!");
     }
+
+    public void busquedaReservaPorCliente(String vpIdentificacion){
+
+    }
+
+    public void cancelarReservaPorCliente(String vpIdentificacion){
+        
+    }
 }
