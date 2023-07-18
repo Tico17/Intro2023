@@ -90,6 +90,14 @@ public class Cliente {
      * y consistente de configurar objetos con valores iniciales, lo que contribuye
      * a la encapsulación y la correcta utilización de las clases.
      */
+
+    public Cliente(){
+        vgNombre = "";
+        vgApellido = "";
+        vgIdentificacion = "";
+        vgTelefono = "";
+    }
+
     public Cliente(String vpNombre, String vpApellido, String vpIdentificacion, String vpTelefono) {
         // 2.1 Asignamos los valores recibidos por paramtros a nuetros atributos
         // globales.

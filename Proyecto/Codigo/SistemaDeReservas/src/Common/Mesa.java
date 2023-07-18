@@ -1,16 +1,26 @@
 package Common;
 
 public class Mesa {
-    
 
     /** definimos los atributos que salen para representarlos con variables */
-    public int vgNumeroDeMesa;
-    public int vgCantidadDeSillas;
-
+    private int vgNumeroDeMesa;
+    private int vgCantidadDeSillas;
+    
+    private String vgEstado;
+    private Cliente vgCliente;
+    private String fecha; // dd/MM/yyy
+    private String hora; // hh:mm: ss
     /* Constrcutor */
-    public Mesa(){
+
+    public Mesa() {
         vgNumeroDeMesa = 0;
         vgCantidadDeSillas = 0;
+    }
+
+    public Mesa(int vpNumeroMesa, int vpCantidadSillas) {
+        vgNumeroDeMesa = vpNumeroMesa;
+        vgCantidadDeSillas = vpCantidadSillas;
+        vgEstado = "Disponible";
     }
 
     public int getVgNumeroDeMesa() {
@@ -29,5 +39,35 @@ public class Mesa {
         this.vgCantidadDeSillas = vgCantidadDeSillas;
     }
 
-    
+    public String getVgEstado() {
+        return vgEstado;
+    }
+
+    public void setVgEstado(String vgEstado) {
+        this.vgEstado = vgEstado;
+    }
+
+    public Cliente getVgCliente() {
+        return vgCliente;
+    }
+
+    public void setVgCliente(Cliente vgCliente) {
+        this.vgCliente = vgCliente;
+    }
+
+    public String getFecha() {
+        return fecha;
+    }
+
+    public void setFecha(String fecha) {
+        this.fecha = fecha;
+    }
+
+    public String getHora() {
+        return hora;
+    }
+
+    public void setHora(String hora) {
+        this.hora = hora;
+    }
 }

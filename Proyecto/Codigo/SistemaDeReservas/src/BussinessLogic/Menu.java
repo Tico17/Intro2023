@@ -2,13 +2,21 @@ package BussinessLogic;
 
 import java.util.Scanner;
 import Common.Cliente;
+import Common.Mesa;
 
 public class Menu {
+    /** Arreglo de mesas disponibles en el restaurante */
+    private Mesa[] vgArregloDeMesas = new Mesa[10];
+    final String vgEstadoDisponible = "Disponible";
+    final String vgEstadoReservada = "Reservada";
 
     /**
      * Metodo constructor
      */
     public Menu() { // Inicio constructor
+
+        inicializarMesas();
+
         login();
     } // Fin de constructor
 
@@ -40,9 +48,9 @@ public class Menu {
             /** 4. Vamos a mostrar las opciones que estan permitidas para el usuario */
             /** Para esto utlizamos el System.out.println */
             System.out.println("=== Menú ===");
-            System.out.println("1. Opción 1");
-            System.out.println("2. Opción 2");
-            System.out.println("3. Opción 3");
+            System.out.println("1. Consulta de mesas disponibles");
+            System.out.println("2. Reservar mesa");
+            System.out.println("3. Consulta de mesas reservadas");
             System.out.println("4. Salir");
             System.out.print("Elige una opción: ");
 
@@ -73,16 +81,26 @@ public class Menu {
              */
             switch (opcion) { // inicio de switch
                 case 1:
-                    Saludar();
-                    // Agrega el código correspondiente a la opción 1
+                    getMesasPorEstado(vgEstadoDisponible);
                     break;
                 case 2:
-                    System.out.println("Has seleccionado la opción 2");
+                    // Todos tienen que ser llenados por el usuario.
+
+                    Cliente vlCliente = new Cliente();
+                    vlCliente.setNombre("John");
+                    vlCliente.setApellido("Quesada");
+                    vlCliente.setIdentificacion("202220222");
+                    vlCliente.setTelefono("8888-8888");
+                    int vlNumeroMesa = 5;
+                    String vlFecha = "18/07/2023";
+                    String vlHora = "12:00md";
+
+                    reservarMesa(vlCliente, vlNumeroMesa, vlFecha, vlHora);
                     // Agrega el código correspondiente a la opción 2
                     break;
                 case 3:
-                    System.out.println("Has seleccionado la opción 3");
-                    // Agrega el código correspondiente a la opción 3
+                    getMesasPorEstado(vgEstadoReservada);
+
                     break;
                 case 4:
                     System.out.println("Saliendo del programa...");
@@ -144,4 +162,46 @@ public class Menu {
 
     }
 
+    public void inicializarMesas() {
+        // Todas mis mesas van a tener 4 espacios.
+        for (int indice = 0; vgArregloDeMesas.length > indice; indice++) {
+            vgArregloDeMesas[indice] = new Mesa(indice + 1, 4);
+        }
+
+    }
+
+    // crear un metodo
+    public void getMesasPorEstado(String vpEstado) {
+        System.out.println("Lista de mesas : " + vpEstado);
+
+        for (int indice = 0; vgArregloDeMesas.length > indice; indice++) {
+            String vlEstado = vgArregloDeMesas[indice].getVgEstado();
+
+            if (vlEstado.equals(vpEstado)) {
+                System.out.println("Mesa #" + vgArregloDeMesas[indice].getVgNumeroDeMesa());
+            }
+        }
+    }
+
+    public void reservarMesa(Cliente vpCliente, int vpNumeroMesa, String vpFecha, String vpHora) {
+
+        for (int indice = 0; vgArregloDeMesas.length > indice; indice++) {
+
+            if (vgArregloDeMesas[indice].getVgNumeroDeMesa() == vpNumeroMesa
+                    && vgArregloDeMesas[indice].getVgEstado().equals(vgEstadoDisponible)) {
+
+                System.out.println("La mesa #" + vpNumeroMesa + ", fue reservada de forma exitosa!");
+
+                // Paso 1 cambiar el estado de la mesa por Reservada.
+                vgArregloDeMesas[indice].setVgEstado(vgEstadoReservada);
+                vgArregloDeMesas[indice].setVgCliente(vpCliente);
+                vgArregloDeMesas[indice].setFecha(vpFecha);
+                vgArregloDeMesas[indice].setHora(vpHora);
+
+                return;
+            }
+        }
+
+        System.out.println("El numero de mesa: " + vpNumeroMesa + " no esta disponible!");
+    }
 }
