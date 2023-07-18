@@ -185,14 +185,40 @@ public class Menu {
 
     public void reservarMesa(Cliente vpCliente, int vpNumeroMesa, String vpFecha, String vpHora) {
 
+        /** Paso 1: Creamos un for para recorrer el arregle de mesas --> vgArregloDeMesas. Este recorrido
+         * tiene el objetivo de buscar y verificar si la mesa seleccionada para la reserva esta disponible.
+         */
         for (int indice = 0; vgArregloDeMesas.length > indice; indice++) {
 
-            if (vgArregloDeMesas[indice].getVgNumeroDeMesa() == vpNumeroMesa
-                    && vgArregloDeMesas[indice].getVgEstado().equals(vgEstadoDisponible)) {
+            /** Paso 2: Creamos un condicional por medio de un if para ir verificando cada posicion del arreglo hasta
+             * encontrar la mesa donde su numero se igual al suministrado por el usuario.
+             * para esto revisamos el arregle en cada recorrido, ciclo o vuelta del for.
+             * 
+             * Se comparar dos atributos del la mesa numero de mesa y el estado.
+             */
 
+            /** Paso 2.1 obtener el valor de la mesa que pertenece al indice del ciclo y asignarlo a una variable */
+            Mesa vlMesaDelCiclo = vgArregloDeMesas[indice];
+            /** Paso 2.2 obtener el numero de mesa y su estado por medio de los metodo getters*/
+            String vlEstado = vlMesaDelCiclo.getVgEstado(); /** Para obtener el estado utilizamos el metodo getVgEstado() */
+            int vlNumeroMesa = vlMesaDelCiclo.getVgNumeroDeMesa(); /** Para obtener el numero de mesa utilizamos el metodo getVgNumeroDeMesa */
+            
+            /** Paso 3. comparamos los valores de la mesa que va en el ciclo contra los parametros suministrados al metodo */
+            if (vlNumeroMesa == vpNumeroMesa  && vlEstado.equals(vgEstadoDisponible)) {
+
+                /** Paso 4. Si los parametros son iguales a la mesa se ingresa al if para realizar la reserva */
+                /** Paso 4.1 Se muestra un mensaje indicando que la mesa fue reservada de forma exitosa  */
                 System.out.println("La mesa #" + vpNumeroMesa + ", fue reservada de forma exitosa!");
 
-                // Paso 1 cambiar el estado de la mesa por Reservada.
+                /** Paso 4.2 Modificamos los atributos de la mesa para asignar los valores de la reserva y tener los datos diponibles 
+                 * para futuras consultas.
+                 */
+
+                /** Pas 4.3 como vamos a modificar los datos almacenados previamente en una posicion del arreglo utilizamos
+                 * la siguiente forma arreglo[indice].setMedoDelAtributo que deseamos modificar.
+                 * 
+                 * Teniendo en cuenta que los metodos get son para obtener informacion y los set para asigna o actualizar informacion
+                */
                 vgArregloDeMesas[indice].setVgEstado(vgEstadoReservada);
                 vgArregloDeMesas[indice].setVgCliente(vpCliente);
                 vgArregloDeMesas[indice].setFecha(vpFecha);
@@ -202,6 +228,9 @@ public class Menu {
             }
         }
 
+        /** Si el for finaliza y nunca ingreso al if es porque no existe una mesa que cumpla con los parametros de busqueda
+         * por medio de un mensaje le informamos al usuario que la mesa no esta disponible.
+         */
         System.out.println("El numero de mesa: " + vpNumeroMesa + " no esta disponible!");
     }
 }
