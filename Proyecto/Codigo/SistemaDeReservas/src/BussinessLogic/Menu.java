@@ -183,6 +183,13 @@ public class Menu {
         }
     }
 
+    /**
+     * 
+     * @param vpCliente
+     * @param vpNumeroMesa
+     * @param vpFecha
+     * @param vpHora
+     */
     public void reservarMesa(Cliente vpCliente, int vpNumeroMesa, String vpFecha, String vpHora) {
 
         /** Paso 1: Creamos un for para recorrer el arregle de mesas --> vgArregloDeMesas. Este recorrido
@@ -192,7 +199,7 @@ public class Menu {
 
             /** Paso 2: Creamos un condicional por medio de un if para ir verificando cada posicion del arreglo hasta
              * encontrar la mesa donde su numero se igual al suministrado por el usuario.
-             * para esto revisamos el arregle en cada recorrido, ciclo o vuelta del for.
+             * para esto revisamos el arreglo en cada recorrido, ciclo o vuelta del for.
              * 
              * Se comparar dos atributos del la mesa numero de mesa y el estado.
              */
